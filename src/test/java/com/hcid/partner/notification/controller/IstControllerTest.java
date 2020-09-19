@@ -1,10 +1,11 @@
 package com.hcid.partner.notification.controller;
 
-import com.hcid.partner.notification.dto.FirebaseResponse;
-import com.hcid.partner.notification.dto.IstRequest;
-import com.hcid.partner.notification.entity.SMSQueue;
-import com.hcid.partner.notification.service.SmsQueueService;
-import com.hcid.partner.notification.service.messaging.IstServiceProducer;
+import com.product.controller.IstProducerController;
+import com.product.dto.FirebaseResponse;
+import com.product.dto.IstRequest;
+import com.product.entity.Product;
+import com.product.notification.service.messaging.IstServiceProducer;
+import com.product.service.SmsQueueService;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -28,7 +29,7 @@ public class IstControllerTest {
 
     IstRequest request = new IstRequest();
     FirebaseResponse firebaseResponse = new FirebaseResponse();
-    SMSQueue sms2  = new SMSQueue();
+    Product sms2  = new Product();
 
     @Test
     public void sendEmail_Success() throws Exception {

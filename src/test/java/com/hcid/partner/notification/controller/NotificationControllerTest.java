@@ -1,11 +1,12 @@
 package com.hcid.partner.notification.controller;
 
-import com.hcid.partner.notification.dto.FirebaseResponse;
-import com.hcid.partner.notification.dto.Request;
-import com.hcid.partner.notification.entity.SMSQueue;
-import com.hcid.partner.notification.service.NotificationService;
-import com.hcid.partner.notification.service.SmsQueueService;
-import com.hcid.partner.notification.service.messaging.SMSQueueSenderService;
+import com.product.controller.ProductController;
+import com.product.dto.FirebaseResponse;
+import com.product.dto.Request;
+import com.product.entity.Product;
+import com.product.notification.service.messaging.SMSQueueSenderService;
+import com.product.service.ProductService;
+import com.product.service.SmsQueueService;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -21,10 +22,10 @@ import org.springframework.boot.test.context.SpringBootTest;
 public class NotificationControllerTest {
 
     @InjectMocks
-    NotificationController notificationController;
+    ProductController notificationController;
 
     @Mock
-    NotificationService notificationService;
+    ProductService notificationService;
     @Mock
     SmsQueueService smsQueueService;
     @Mock
@@ -32,7 +33,7 @@ public class NotificationControllerTest {
 
     Request request = new Request();
     FirebaseResponse firebaseResponse = new FirebaseResponse();
-    SMSQueue sms2  = new SMSQueue();
+    Product sms2  = new Product();
 
     @Test
     public void sendEmail_Success() throws Exception {

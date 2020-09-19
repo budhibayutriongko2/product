@@ -6,6 +6,8 @@ import org.mockito.InjectMocks;
 import org.mockito.runners.MockitoJUnitRunner;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import com.product.controller.VersionController;
+
 @RunWith(MockitoJUnitRunner.class)
 @SpringBootTest
 public class VersionControllerTest {
